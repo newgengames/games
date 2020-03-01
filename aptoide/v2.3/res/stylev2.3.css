@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url(https://voublaa.github.io/res/font/Montserrat-Regular.ttf);
+  }
+  
+	body {
+		margin:0;
+		  font-family: "Montserrat-Regular";
+		color:#a0a2af;
+		}
+		
+	.full {
+		width:100%;
+		text-align:center;
+		animation:full 0.3s ease-in ;
+		padding-bottom:100px;
+		}
+		
+		@keyframes full {
+			0% {
+				opacity:0;
+				transform:translateX(-80px);
+				}
+				
+			100% {
+				opacity:1;
+				transform:translateX(0px);
+				}
+			}
+	
+	.lg {
+		padding-top:60px;
+		padding-bottom:60px;
+		margin:0 auto;
+		background-color:teal;
+		color:white;
+		font-weight:800;
+		}
+	
+	.layout {
+		width:100%;
+		height:50px;
+		padding-top:10px;
+		padding-bottom:10px;
+		
+		
+		}
+		
+ .img {
+		width:50px;
+		height:50px;
+		margin-left:5px;
+		position:absolute;
+		left:0%;
+                border-radius:5px;
+		}
+
+        .lock {
+		width:20px;
+		transform:translateX(5px);
+		}
+
+        .ad {
+		font-size:12px;
+		color:#D14A00;
+		}
+		
+	.no-ad {
+		font-size:12px;
+		color:#C2B400;
+		}
+
+	.text {
+		position:absolute;
+		left:65px;
+		transform:translateY(17px);
+		font-size:15px;
+		font-weight:600;
+		}
+		
+	.gap {
+		width:100%;
+		height:1px;
+		background-color:teal;
+		}
