@@ -1,0 +1,78 @@
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=2, maximum-scale=1.0, user-scalable=no" />
+	    <link href="style.css" rel="stylesheet" type="text/css"/>
+	<style>
+		.answer {
+			width:8px;
+    height:8px;
+    
+    position:absolute;
+			 transform:translate(135px, 250px);
+			}
+	</style>
+</head>
+<body>
+	
+	<div class="title">Level 7</div>
+   	<div class="small_container">
+        	<div class="small_img2_cover">
+               	<img src="level7_small.jpg" class="small_img2" onclick=" document.getElementsByClassName('small_img_cover')[0].style.display='block'; document.getElementsByClassName('small_container')[0].style.display='none'; document.getElementsByClassName('big_img_cover')[0].style.display='none';  ">
+            </div>
+
+       </div>
+   <!--small container closed-->
+   
+	
+<div class="big_container">
+	 	<div class="big_img_cover" onclick="Clickone(); navigator.vibrate(200); document.getElementsByClassName('wrong')[0].style.display='block';">
+		  <script>
+            function Clickone() {
+              setTimeout(
+                function() {
+                 document.getElementsByClassName('wrong')[0].style.display='none';
+             }, 400);
+             }
+         </script>
+
+ 	<div class="answer" onclick=" document.getElementsByClassName('dialog')[0].style.display='block';  document.getElementsByClassName('small_container')[0].style.display='none'; document.getElementsByClassName('big_img_cover')[0].style.display='none'; document.getElementsByClassName('wrong_hide')[0].style.display='block';">
+     </div>
+  <img src="level7_big.jpg" class="big_img">
+  	
+ 	</div>
+
+</div>
+<!--big container closed-->
+   
+  
+ 
+   <div class="small_img_cover">
+<img src="level7_small.jpg" class="small_img" onclick=" document.getElementsByClassName('small_img_cover')[0].style.display='none'; document.getElementsByClassName('small_container')[0].style.display='block'; document.getElementsByClassName('big_img_cover')[0].style.display='block'; ">
+	<div class="close" onclick=" document.getElementsByClassName('small_img_cover')[0].style.display='none'; document.getElementsByClassName('small_container')[0].style.display='block'; document.getElementsByClassName('big_img_cover')[0].style.display='block'; ">
+close
+</div>
+
+</div>
+
+<div class="dialog">
+	<div class="dialog_txt"> LEVEL 7 COMPLETED <br/>You got it! <br/>
+	Lets try next</div>
+	<div class="next" onclick="parent.location='level8.html'; ">Next Level</div>
+</div>
+
+<div class="levels" onclick="parent.location='level.html'; "> select levels</div>
+
+
+   <div class="wrong">X</div>
+   <div class="wrong_hide"></div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
