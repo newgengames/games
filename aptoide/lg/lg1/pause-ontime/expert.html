@@ -1,0 +1,47 @@
+<html>
+<head>
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+		 <link href="res/style.css" rel="stylesheet" type="text/css"/>
+	<style>
+		
+	.main-img {
+		text-align:center;
+		
+		animation:rotate 0.5s linear infinite;
+		}
+		
+	@keyframes rotate {
+		0% {
+			transform:rotate(0deg);
+			}
+			
+		100% {
+			transform:rotate(360deg);
+			}
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="full">
+		<div class="circle">
+			<img src="pause.png" width="90%" class="main-img" id="main-imgid">
+		</div>
+<script>
+  function togglePlayState(newState) {
+    document.getElementById("main-imgid").style.animationPlayState=newState;
+  }
+</script>
+
+<div class="point-bg">
+	<div class="point">
+		<img src="arrow.png" width="100%">
+	</div>
+</div>
+        <div class="button-area">
+	       <div class="pause" onclick="togglePlayState('Paused'); document.getElementsByClassName('continue')[0].style.display='block'; document.getElementsByClassName('pause')[0].style.display='none'; ">STOP</div>
+<div class="continue" onclick="togglePlayState('Running'); document.getElementsByClassName('continue')[0].style.display='none'; document.getElementsByClassName('pause')[0].style.display='block'; ">RESUME</div>
+       </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<html>
+<head>
+	   
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	@font-face {
+    font-family: "Montserrat-Bold";
+    src: url(res/Montserrat-Bold.ttf);
+  }
+  
+	body {
+		margin:0;
+		text-align:center;
+		background: linear-gradient(to bottom, #FF00CB, #FF34D6, #FF41D8, #FF7CE4, #FFA3EC);
+		overflow-x:hidden;
+		font-family:Montserrat-Bold;
+		color:#643D69;
+		user-select: none; /* supported by Chrome and Opera */
+                -webkit-user-select: none; /* Safari */
+                -khtml-user-select: none; /* Konqueror HTML */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+		}
+		
+	.content {
+		overflow:hidden;
+		}
+		
+	.ani-img {
+		position:absolute;
+		z-index:9;
+		}
+		
+	.title-div {
+		width:100%;
+		font-size:40px;
+		padding-top:40px;
+		padding-bottom:40px;
+		font-weight:800;
+		
+		
+		}
+		
+	.post-bg {
+		width:100%;
+		display:flex;
+		flex-wrap:wrap;
+		z-index:10;
+		
+		}
+		
+	 .post {
+		width:80%;
+		padding:20px;
+		background-color: #9A56AD;
+		margin:5px;
+		margin-left:5%;
+		display:flex;
+		border-radius:10px;
+		z-index:10;
+		box-shadow:1px 1px 8px #93267D, 1px 1px 8px #93267D;
+		}
+		
+	
+			
+   .square {
+   	position:absolute;
+   width:100%;
+   height:100%;
+   top:0;
+   left:0;
+   background: linear-gradient(to bottom, #FF00CB, #FF34D6, #FF41D8, #FF7CE4, #FFA3EC);
+   z-index:999;
+   display:none;
+   animation:outro 0.2s linear 1;
+   }
+   
+   @keyframes outro {
+   	0% {
+   	position:absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%, -50%);
+   width:80px;
+   height:80px;
+   }
+   
+   100% {
+   	position:absolute;
+   top:0%;
+   left:0%;
+   width:100%;
+   height:100%;
+   }
+   }
+</style>
+</head>
+<body>
+	<div class="content">
+		
+		
+		
+		
+		<div class="title-div">
+		Pause onTime
+		</div>
+		
+		<div class="post-bg">
+			<div class="post post1" onclick="Clickone(); document.getElementsByClassName('square')[0].style.display='block'; ">
+				Beginners (40 RPM)
+			</div>
+			   <script>
+          function Clickone() {
+            setTimeout(
+              function() {
+               parent.location='beginners.html';
+           }, 250);
+           }
+       </script>
+			
+			<div class="post post2" onclick="Clicktwo(); document.getElementsByClassName('square')[0].style.display='block';">
+				Intermediate (60 RPM)
+			</div>
+			   <script>
+          function Clicktwo() {
+            setTimeout(
+              function() {
+               parent.location='intermediate.html';
+           }, 250);
+           }
+       </script>
+			
+			<div class="post post3" onclick="Clickthree(); document.getElementsByClassName('square')[0].style.display='block';">
+				Expert (120 RPM)
+			</div>
+			   <script>
+          function Clickthree() {
+            setTimeout(
+              function() {
+               parent.location='expert.html';
+           }, 250);
+           }
+       </script>
+			
+			<div class="post post4" onclick="Clickfour(); document.getElementsByClassName('square')[0].style.display='block';">
+			Pro (150 RPM)
+			</div>
+			   <script>
+          function Clickfour() {
+            setTimeout(
+              function() {
+               parent.location='pro.html';
+           }, 250);
+           }
+       </script>
+			
+		</div>
+		
+	</div>
+	<div class="square"></div>
+</body>
+</html>
