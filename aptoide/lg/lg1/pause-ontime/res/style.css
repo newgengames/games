@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url(res/Montserrat-Bold.ttf);
+  }
+
+body {
+		background: linear-gradient(to bottom, #FF00CB, #FF34D6, #FF41D8, #FF7CE4, #FFA3EC);
+		font-family:Montserrat-Bold;
+		user-select: none; /* supported by Chrome and Opera */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+		}
+		
+.full {
+	opacity:1;
+	animation:opacity 2s linear 1;
+	}
+	
+	@keyframes opacity {
+		0% {
+			opacity:0;
+			}
+			
+		100% {
+			opacity:1;
+			}
+		}
+		
+	.circle {
+	   text-align:center;
+	overflow:hidden;
+	
+		}
+
+.point-bg {
+		
+		width:100%;
+		
+		transform:translateY(0px);
+		text-align:center;
+		}
+		
+	.point {
+		width:20px;
+		margin:0 auto;
+		}
+		
+	.button-area {
+		position:absolute;
+		top:80%;
+		left:0;
+		width:90%;
+		background-color:#9A56AD;
+		transform:translateY(20px);
+		border-radius:10px;
+		text-align:center;
+		margin-left:5%;
+		}
+		
+	.pause {
+		width:100px;
+		padding:15px;
+		background-color:#643D69;
+		margin:0 auto;
+		border-radius:5px;
+		color:white;
+		}
+		
+	.continue {
+		width:100px;
+		padding:15px;
+		background-color:#643D69;
+		margin:0 auto;
+		border-radius:5px;
+		color:white;
+		display:none;
+		}
