@@ -1,0 +1,118 @@
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=2, maximum-scale=1.0, user-scalable=no" />
+<style>
+@font-face {
+    font-family: "Dumb";
+    src: url(2Dumb.ttf);
+  }
+  
+body {
+margin:0;
+    font-family: Dumb;
+    font-weight:800;
+}
+
+.top {
+     width:100%;
+     height:10%;
+     
+}
+
+.level_content {
+width:100%;
+
+display:flex;
+flex-wrap:wrap;
+}
+
+.title {
+	text-align:center;
+	transform:translateY(20px);
+	}
+	
+	.level {
+		width:60px;
+		height:60px;
+		border-radius:10px;
+		
+		display:flex;
+		
+		
+		margin:15px;
+	 
+		}
+		
+	p {
+		font-size:19px;
+		position:relative;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		animation:anim 4s linear infinite;
+	  }
+	
+	p1 {
+		font-size:14px;
+		padding-left:25px;
+		transform:translateY(30px);
+	  }
+	
+	@keyframes anim {
+		0% {
+			transform:rotate(0deg);
+			}
+			
+		10% {
+			transform:rotate(50deg);
+			}
+			
+		15% {
+			transform:rotate(0deg);
+			}
+			
+			20% {
+			transform:rotate(50deg);
+			}
+			
+		25% {
+			transform:rotate(0deg);
+			}
+			
+			100% {
+				transform:rotate(0deg);
+				}
+		}
+		
+		p2 {
+			font-weight:400;
+			font-size:15px;
+			}
+			
+		.coming_soon {
+			text-align:center;
+			transform:translateY(40px);
+			}
+
+</style>
+</head>
+<body>
+<div class="top">
+<div class="title"><strong>FIND THE DIFFERENCE </strong><br/><br/><br/><p2>Choose Level</p2></div>
+</div>
+
+<div class="level_content">
+   <div class="level" onclick="parent.location='level1.html'; "><p>1</p></div>
+   <div class="level" onclick="parent.location='level2.html'; "><p>2</p></div>
+   <div class="level" onclick="parent.location='level3.html'; "><p>3</p></div>
+   <div class="level" onclick="parent.location='level4.html'; "><p>4</p></div>
+   <div class="level" onclick="parent.location='level5.html'; "><p>5</p></div>
+   <div class="level" onclick="parent.location='level6.html'; "><p>6</p></div>
+   <div class="level" onclick="parent.location='level7.html'; "><p>7</p></div>
+   <div class="level" onclick="parent.location='level8.html'; "><p>8</p></div>
+
+   
+   <div class="coming_soon" onclick="parent.location='level15.html'; "><p1>More Coming Soon...</p1></div>
+</div>
+</body>
+</html>
