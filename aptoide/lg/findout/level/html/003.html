@@ -1,0 +1,119 @@
+<html>
+<head>
+	<script src="../../res/jquery.min.js"></script>
+	<meta name="viewport" content="initial-scale=2, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="../../res/style.css" />
+	<style>
+		.ans1, .ans1-con {border-radius:5px; top:47%; left:92.5%; }
+		.ans2, .ans2-con {top:65%; left:7%; }
+        .ans3, .ans3-con {top:17%; left:21%; }
+	</style>
+</head>
+<body>
+	<div class="full">
+		<div class="top">
+			<img src="../../res/back.png" class="skip-img">
+			<img src="../../res/back.png" class="back-img">
+			LEVEL 3
+		</div>
+		
+		<div class="img-ct">
+		    <img class="main-img" src="../images/003.jpg" width="100%">
+			<div class="ans ans1"></div><div class="ans-con ans1-con"></div>
+			<div class="ans ans2"></div><div class="ans-con ans2-con"></div>
+			<div class="ans ans3"></div><div class="ans-con ans3-con"></div>
+		</div>
+		
+	   <div class="btm">
+		  <div class="btm-ti">FIND THESE ITEMS</div>
+		  <div class="btm-ct">
+			<div class="ct ct1">1. Flowers</div>
+			<div class="ct ct2">2. Cupcake With Cherry</div>
+			<div class="ct ct3">3. Yellow Jar</div>
+		  </div>
+	   </div>
+	
+	<div class="fixed-nav">
+         <div class="lives">
+         	<img class="lives-img lives1" src="../../res/heart.png">
+         	<img class="lives-img lives2" src="../../res/heart.png">
+         	<img class="lives-img lives3" src="../../res/heart.png">
+         	<img class="lives-img lives4" src="../../res/heart.png">
+         	<img class="lives-img lives5" src="../../res/heart.png">
+         </div>
+         <div class="pause">PAUSE</div>
+         <div class="zoom-in">Zoom In</div><div class="zoom-out">Zoom Out</div>
+    </div>
+	
+	</div><!--full closed-->
+		
+	<div class="game-over-con">
+		<div class="game-over">
+              <div class="finish-ti">Game Over</div>
+            <div class="finish-btn">
+            	<div class="button home">Menu</div>
+            	<div class="button retry">RETRY</div>
+            </div>
+        </div>
+     </div>
+     <div class="finish-con">
+		<div class="finish">
+            <div class="finish-ti">Level Completed</div>
+            <div class="finish-btn">
+            	<div class="button home">Menu</div>
+            	<div class="next">Next</div>
+            </div>
+        </div>
+     </div>
+     <div class="pause-con">
+        <div class="pause-bg">
+        	<div class="pause-ti">PAUSED</div>
+            <div class="finish-btn">
+            	<div class="button home">Menu</div>
+            	<div class="button play">PLAY</div>
+           </div>
+        </div>
+     </div>
+     
+     
+     
+     <div class="skip-con">
+        <div class="pause-bg">
+        	<div class="pause-ti">Want to skip this level?</div>
+            <div class="finish-btn">
+            	<div class="button play">NO</div>
+            	<div class="reward-ad">YES</div>
+                <div class="done">DONE</div>
+           </div>
+        </div>
+     </div>
+     <audio id="right" src="../../res/right.mp3" autoplay="false" ></audio>
+     <audio id="wrong" src="../../res/wrong.mp3" autoplay="false" ></audio>
+     <audio id="button" src="../../res/button.mp3" autoplay="false" ></audio>
+     <audio id="game-over" src="../../res/gameover.mp3" autoplay="false" ></audio>
+     <audio id="finish" src="../../res/finish.mp3" autoplay="false" ></audio>
+     <script src="../../res/jquery.js" type="text/javascript"></script>
+     <script src="../../res/jquery3.js" type="text/javascript"></script>
+     <script>
+     	$('.next').click(function() {
+	setTimeout(
+			function() { location.replace("004.html"); }, 100);
+  });
+
+$('.ans1, .ans2, .ans3, .ans4, .done').click(function() {
+	if (progress == 3) { 
+	  localStorage.setItem("4", "4");
+      var sound = document.getElementById("finish");
+          sound.play();
+         audio.volume = 1;
+} else {
+var sound = document.getElementById("right");
+          sound.play();
+         audio.volume = 1;
+}
+});
+	
+     </script>
+     
+</body>
+</html>
