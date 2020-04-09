@@ -1,0 +1,310 @@
+<html>
+<head>
+	<script src="res/jquery.min.js"></script>
+	<meta name="viewport" content="initial-scale=2, maximum-scale=1.0, user-scalable=no" />
+	<style>
+		@font-face {
+            font-family: "Raleway-Black";
+            src: url(res/Raleway-Black.ttf);
+            }
+           
+          body {
+          	margin:0;
+	        font-family:Raleway-Black;
+	        background-color: #cc5577;
+            background-image: url("res/2.svg");
+		    background-attachment: fixed;
+            background-size: cover;
+            animation: body 0.9s linear;
+		  }
+		  
+		  @keyframes body {
+			  0% {
+				  opacity: 0;
+			  }
+
+			  100% {
+				  opacity: 1;
+			  }
+		  }
+          
+		.title {
+			width:100%;
+			text-align:center;
+			padding:10px 0px;
+			font-size:25px;
+			color:white;
+			-webkit-text-stroke:1px black;
+			}
+			
+		.bottom {
+			padding:5px;
+			display:flex;
+			flex-wrap:wrap;
+			color:white;
+			animation:bottom 0.3s ease-in;
+			}
+			
+		@keyframes bottom {
+			0% {
+				transform:translateY(100%);
+				opacity:0;
+				}
+				
+			100% {
+				transform:translateY(0%);
+				opacity:1;
+				}
+			}
+			
+		.unlocked {
+			width:120px;
+			padding:5px;
+			padding-bottom:10px;
+			background:#FF7B74;
+			text-align:center;
+			margin:9px auto;
+			border-radius:10px 0px;
+			display:none;
+			}
+			
+		.locked {
+			width:120px;
+			position:relative;
+			padding:5px;
+			padding-bottom:10px;
+			background:#CF645E;
+			text-align:center;
+			margin:9px auto;
+			border-radius:10px 0px;
+			display:none;
+			}
+			
+		.ct-img {
+			width:100%;
+			margin-bottom:7px;
+			border-radius:10px 0px 0px 0px;
+			}
+			
+		.locked-img {
+			opacity:0.4;
+			}
+			
+		.lock {
+			width:25px;
+			position:absolute;
+			top:5px;
+			left:100%;
+			transform:translateX(-120%);
+			}
+	</style>
+</head>
+<body>
+	<div class="full">
+		<div class="top">
+			<div class="title">SELECT LEVEL</div>
+		</div>
+		
+
+
+		<style>
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s;
+}
+
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes come-in {
+  to {
+    transform: translateY(0);
+  }
+}
+		</style>
+		
+			<section class="bottom">
+  
+					<div class="unlocked ct1 module" style="display:block;" onclick="parent.location='level/html/001.html'; ">
+						<img src="level/images/001.jpg" class="ct-img">
+						Level 1
+					</div>
+				  
+					<div class="locked locked2 module">
+							<img src="level/images/002.jpg" class="ct-img locked-img">
+							<img src="res/lock.png" class="lock">
+							Level 2
+						</div>
+						<div class="unlocked unlocked2 module" onclick="parent.location='level/html/002.html';">
+							<img src="level/images/002.jpg" class="ct-img">
+							Level 2
+						</div>
+						
+						<div class="locked locked3 module">
+							<img src="level/images/003.jpg" class="ct-img locked-img">
+							<img src="res/lock.png" class="lock">
+							Level 3
+						</div>
+						<div class="unlocked unlocked3 module" onclick="parent.location='level/html/003.html';">
+							<img src="level/images/003.jpg" class="ct-img">
+							Level 3
+						</div>
+
+						<div class="locked locked4 module">
+								<img src="level/images/004.jpg" class="ct-img locked-img">
+								<img src="res/lock.png" class="lock">
+								Level 4
+							</div>
+							<div class="unlocked unlocked4 module" onclick="parent.location='level/html/004.html';">
+								<img src="level/images/004.jpg" class="ct-img">
+								Level 4
+							</div>
+
+							<div class="locked locked5 module">
+									<img src="level/images/005.png" class="ct-img locked-img">
+									<img src="res/lock.png" class="lock">
+									Level 5
+								</div>
+								<div class="unlocked unlocked5 module" onclick="parent.location='level/html/005.html';">
+									<img src="level/images/005.png" class="ct-img">
+									Level 5
+								</div>
+								
+							<div class="locked locked6 module">
+									<img src="level/images/006.jpg" class="ct-img locked-img">
+									<img src="res/lock.png" class="lock">
+									Level 6
+								</div>
+								<div class="unlocked unlocked6 module" onclick="parent.location='level/html/006.html';">
+									<img src="level/images/006.jpg" class="ct-img">
+									Level 6
+								</div>
+								
+							<div class="locked locked7 module">
+									<img src="level/images/007.jpg" class="ct-img locked-img">
+									<img src="res/lock.png" class="lock">
+									Level 7
+								</div>
+								<div class="unlocked unlocked7 module" onclick="parent.location='level/html/007.html';">
+									<img src="level/images/007.jpg" class="ct-img">
+									Level 7
+								</div>
+								
+							<div class="locked locked8 module">
+									<img src="level/images/008.jpg" class="ct-img locked-img">
+									<img src="res/lock.png" class="lock">
+									Level 8
+								</div>
+								<div class="unlocked unlocked8 module" onclick="parent.location='level/html/008.html';">
+									<img src="level/images/008.jpg" class="ct-img">
+									Level 8
+								</div>
+								
+							<div class="locked locked9 module">
+									<img src="level/images/009.jpg" class="ct-img locked-img">
+									<img src="res/lock.png" class="lock">
+									Level 9
+								</div>
+								<div class="unlocked unlocked9 module" onclick="parent.location='level/html/009.html';">
+									<img src="level/images/009.jpg" class="ct-img">
+									Level 9
+								</div>
+	
+		
+			</section>
+			
+			
+			
+			
+
+	</div>
+	<script>
+		if (localStorage.getItem("2") === null) {
+           $('.locked2').css({
+           'display': 'block'
+           });
+        } else {
+           $('.unlocked2').css({
+           'display': 'block'
+           });
+        }
+        
+      if (localStorage.getItem("3") === null) {
+           $('.locked3').css({
+           'display': 'block'
+           });
+        } else {
+           $('.unlocked3').css({
+           'display': 'block'
+           });
+		}
+		
+		if (localStorage.getItem("4") === null) {
+           $('.locked4').css({
+           'display': 'block'
+           });
+        } else {
+           $('.unlocked4').css({
+           'display': 'block'
+           });
+		}
+		
+		if (localStorage.getItem("5") === null) {
+           $('.locked5').css({
+           'display': 'block'
+           });
+        } else {
+           $('.unlocked5').css({
+           'display': 'block'
+           });
+        }
+        
+       if (localStorage.getItem("6") === null) {
+           $('.locked6').css({
+           'display': 'block'
+           });
+        } else {
+           $('.unlocked6').css({
+           'display': 'block'
+           });
+        }
+        
+       if (localStorage.getItem("7") === null) {
+           $('.locked7').css({
+           'display': 'block'
+           });
+        } else {
+           $('.unlocked7').css({
+           'display': 'block'
+           });
+        }
+        
+       if (localStorage.getItem("8") === null) {
+           $('.locked8').css({
+           'display': 'block'
+           });
+        } else {
+           $('.unlocked8').css({
+           'display': 'block'
+           });
+        }
+        
+       if (localStorage.getItem("9") === null) {
+           $('.locked9').css({
+           'display': 'block'
+           });
+        } else {
+           $('.unlocked9').css({
+           'display': 'block'
+           });
+        }
+	</script>
+	<script  src="res/latest-script.js"></script>
+</body>
+</html>
