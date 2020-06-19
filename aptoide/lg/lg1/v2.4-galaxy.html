@@ -2,9 +2,10 @@
 <head>
 <meta name="viewport" content="initial-scale=2, maximum-scale=1.0, user-scalable=no" />
 <link href="https://newgengames.github.io/games/aptoide/lg/res/stylev2.3.css" rel="stylesheet">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  
 <style>
-	.gap, .img_bg, .bg, .premium, .short {
+	.gap, .img_bg, .lg-ct, .premium, .short {
 		background-color:#8893c9;
 		}
 		
@@ -12,17 +13,16 @@
 		color:white;
 		padding-top:10px;
 		padding-bottom:10px;
+		margin-bottom:2vh;
 		font-size:15px;
 		}
-	
-	
 		
 	.lock {
 		width:15px;
 		}
 		
 	.img2 {
-		width:70px;
+		width:20vw; height:20vw;
 		border-radius:5px;
 		margin:5px;
 		}
@@ -32,23 +32,30 @@
 		}
 		
 	.imgtxt {
-		font-size:22px;
-		transform:translateY(18px);
+		font-size:9vw;
+		transform:translateY(5vw);
 		}
+	.lock-flex {
+	display:flex; flex-wrap:wrap; margin-top:10px;
+	justify-content:space-around; align-items:center;
+	}
 </style>
 </head>
 <body>
 <div class="full">
 	
-	<div class="lg bg">Logic Games 1</div>
+	<div class="lg bg">
+    <div class="lg-ct">Logic Games 1</div>
+    <img src="top.svg" class="top-img">
+    </div>
 	
-
+<div class="layout-bg">
 	<!---game-->
 	<div class="layout" onclick="parent.location='https://m.coolmathgames.com/0-block-the-pig/play' ">
 		<img class="img" src="pig.png">
 			<div class="text">1. Block The Pig</div>
 	</div>
-	<div class="gap"></div>
+	
 	<!--game closed-->
 		
 		
@@ -57,7 +64,7 @@
 		<img class="img" src="cut.png">
 			<div class="text">2. Cut The Buttons</div>
 	</div>
-	<div class="gap"></div>
+	 
 	<!--game closed-->
 		
 		
@@ -66,7 +73,7 @@
 		<img class="img" src="doctor.png">
 			<div class="text">3. Doctor Acorn 2</div>
 	</div>
-	<div class="gap"></div>
+	 
 	<!--game closed-->
 		
 		<!---game-->
@@ -75,7 +82,7 @@
 			<div class="text">4. Feed The Figures 2</div>
 		
 	</div>
-	<div class="gap"></div>
+	 
 	<!--game closed-->
 		
 		<!---game-->
@@ -83,7 +90,7 @@
 		<img class="img" src="fat.png">
 			<div class="text">5. Fat Slice</div>
 	</div>
-	<div class="gap"></div>
+	 
 	<!--game closed-->
 		
 		<!---game-->
@@ -91,7 +98,7 @@
 		<img class="img" src="jelly.gif">
 			<div class="text">6. Jelly Slice</div>
 	</div>
-	<div class="gap"></div>
+	 
 	<!--game closed-->
 		
 		<!---game-->
@@ -99,7 +106,7 @@
 		<img class="img" src="puzzle.png">
 			<div class="text">7. Puzzle Block Ancient</div>
 	</div>
-	<div class="gap"></div>
+	 
 	<!--game closed-->
 		
 		<!---game-->
@@ -107,7 +114,7 @@
 		<img class="img" src="sokoban.png">
 			<div class="text">8. Sokoban</div>
 	</div>
-	<div class="gap"></div>
+	 
 	<!--game closed-->
 		
 		<!---game-->
@@ -115,7 +122,7 @@
 		<img class="img" src="sandy.png">
 			<div class="text">9. Sandy Road</div>
 	</div>
-	<div class="gap"></div>
+	 
 	<!--game closed-->
 		
 		
@@ -124,24 +131,26 @@
 		<img class="img" src="2048.gif">
 			<div class="text">10. 2048</div>
 	</div>
-	<div class="gap"></div>
+	 
 	<!--game closed-->
 		
 
 		
 		<!---game-->
-	<div class="layout" onclick="parent.location='feedback.html' ">
+	<div class="layout" style="width:100vw;" onclick="parent.location='feedback.html' ">
 		<img class="img img_bg" src="feedback.png">
 			<div class="text">Write A Feedback</div>
 	</div>
-	<div class="gap"></div>
+	 
 	<!--game closed-->
+	
+	</div><!--layout-bg-->
 		
 		<div class="premium">Premium Content</div>
 		
 			
 			<!---game-->
-	<div class="layout" onclick="parent.location='https://reward' ">
+	<div class="layout" style="width:100vw;" onclick="parent.location='https://reward' ">
 		<img width="25px" src="lock.png">
 			<div class="text">Unlock 100+ Games for free</div>
 	</div>
@@ -149,7 +158,7 @@
 	<!--game closed-->
 	<!---game-->
 	<div class="layout2" onclick="parent.location='https://reward' ">
-	<div style="display:flex; flex-wrap:wrap; margin-top:10px;">
+	<div class="lock-flex">
 		<img class="img2" src="8ball.jpg">
 		<img class="img2" src="golf.png">
 		<img class="img2" src="baseball.png">
@@ -160,11 +169,18 @@
 		<div class="img2 imgtxt">+100</div>
 	</div>
 	</div>
-	<div class="gap"></div>
+	 
 	<!--game closed-->
 		
-		
-		
+		<div class="loading"><div class="loading-ct">LOADING...</div></div>
 </div>
+
+<script>
+$(".layout").click(function() {
+    $('.lg').css({ transform: 'translateY(-110%)' });
+    $('.layout, .premium').css({opacity: '0' });
+    $('.loading').css({display: 'flex'});
+});
+</script>
 </body>
 </html>
