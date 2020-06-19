@@ -5,54 +5,77 @@
   
 	body {
 		margin:0;
-		  font-family: "Montserrat-Regular";
-		color:#a0a2af;
+		font-family: "Montserrat-Regular";
+		background:#E3E3E3;
+		color:black;
+		user-select: none; /* supported by Chrome and Opera */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
 		}
 		
 	.full {
 		width:100%;
 		text-align:center;
-		animation:full 0.3s ease-in ;
 		padding-bottom:100px;
 		}
 		
-		@keyframes full {
-			0% {
-				opacity:0;
-				transform:translateX(-80px);
-				}
-				
-			100% {
-				opacity:1;
-				transform:translateX(0px);
-				}
-			}
+		
+	.lg { margin-bottom:2vh; transition:all .5s ease; }
 	
 	.lg {
-		padding-top:60px;
-		padding-bottom:60px;
+		position:sticky; top:0;
+		z-index:10;
+		animation:lg .7s ease 1;
+		}
+		@keyframes lg {
+			0% {transform:translateY(-110%); opacity:0;}
+			100% {transform:translateY(0%); opacity:1;}
+			}
+	.lg-ct {
+		padding-top:3vh;
+		
 		margin:0 auto;
-		background-color:teal;
 		color:white;
 		font-weight:800;
 		}
+		
+	.top-img {
+		width:100vw;
+		
+		}
+
+.layout-bg {
+	display:flex; flex-wrap:wrap;
+	justify-content:space-around;
+	}
 	
 	.layout {
-		width:100%;
-		height:50px;
+		width:45vw;
+		background:white;
+		margin-bottom:2vh;
+		z-index:9;
+		display:block;
+		border-radius:8px;
 		padding-top:10px;
 		padding-bottom:10px;
-		
-		
+		transition:all .5s ease;
+		animation: layout 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 1;
+		}
+	.layout:active {
+		background:#8893c9;
+		color:white;
+		}
+	@keyframes layout {
+		0% {transform:translateY(150%); opacity:0;}
+		100% {transform:translateY(0%); opacity:1;}
 		}
 		
  .img {
-		width:50px;
-		height:50px;
-		margin-left:5px;
-		position:absolute;
-		left:0%;
-                border-radius:5px;
+		width:15vw;
+		height:15vw;
+        border-radius:5px;
 		}
 
         .lock {
@@ -71,15 +94,23 @@
 		}
 
 	.text {
-		position:absolute;
-		left:65px;
-		transform:translateY(17px);
-		font-size:13px;
+		font-size:4vw;
 		font-weight:600;
+		padding-top:2vw;
 		}
 		
-	.gap {
-		width:100%;
-		height:1px;
-		background-color:teal;
+	.loading {
+		width:100vw;
+		height:100vh;
+		position:fixed; top:0; left:0;
+		z-index:15;
+		display:flex; flex-wrap:wrap;
+		justify-content:center;
+		align-items:center;
+		font-size:6vw;
+		display:none;
+		}
+	.loading-ct {animation:loading 1s ease 1; }
+	@keyframes loading {
+		0% {opacity:0;} 100% {opacity:1;}
 		}
